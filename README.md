@@ -96,7 +96,52 @@ Email: heskia@example.com
 Password: heskia12
 📂 Struktur Folder
 ```text
-
+api-php-native-heskiamallisa/
+├── .dist/
+├── API PHP Native.postman_collection.json
+├── CHANGELOG.md
+├── Config/
+│   └── env.php
+├── Jwt.php
+├── Src/
+│   ├── Config/
+│   │   └── database.php
+│   ├── Controllers/
+│   │   ├── AuthCotroller.php
+│   │   ├── BaseController.php
+│   │   ├── HealthController.php
+│   │   ├── JwtController.php
+│   │   ├── UploadController.php
+│   │   ├── UserController.php
+│   │   └── VersionController.php
+│   ├── Helpers/
+│   │   ├── Jwt.php
+│   │   ├── RateLimiter.php
+│   │   └── Response.php
+│   ├── Middlewares/
+│   │   ├── AuthMiddleware.php
+│   │   └── CorsMiddleware.php
+│   ├── Repositories/
+│   │   └── UserRepository.php
+│   └── Validation/
+│       └── Validator.php
+├── Uploads/
+│   ├── .htaccess
+│   ├── 4af850fb63bca47a.jpg
+│   ├── 6cb6590ea4d78b04.jpg
+│   └── 9228907af47c425c.pdf
+├── api-contract.php
+├── composer.json
+├── logs/
+│   └── ratelimit_6086e73e72b23946a6c1135b5b25db12.txt
+├── openapi-lite.yaml
+├── public/
+│   ├── .htaccess
+│   ├── index.php
+│   ├── jwt_check.php
+│   └── test.php
+└── README.md
+```
 🧠 Fitur Utama
 Fitur	Deskripsi
 🔹 Routing Manual	Mengatur endpoint API di public/index.php
