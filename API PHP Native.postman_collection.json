@@ -1,0 +1,125 @@
+{
+    "info": {
+      "name": "API PHP Native",
+      "_postman_id": "5b3f0e7e-0c3e-47f5-8e8a-00a1example",
+      "description": "Postman Collection untuk API PHP Native (Praktikum Pemrograman Jaringan)",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Health Check",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": { "raw": "http://localhost/api-php-native-heskiamallisa/public/api/v1/health", "protocol": "http", "host": ["localhost"], "path": ["api-php-native-heskiamallisa", "public", "api", "v1", "health"] }
+        }
+      },
+      {
+        "name": "API Version",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": { "raw": "http://localhost/api-php-native-heskiamallisa/public/api/v1/version", "protocol": "http", "host": ["localhost"], "path": ["api-php-native-heskiamallisa", "public", "api", "v1", "version"] }
+        }
+      },
+      {
+        "name": "Login",
+        "request": {
+          "method": "POST",
+          "header": [{ "key": "Content-Type", "value": "application/json" }],
+          "body": { "mode": "raw", "raw": "{\n    \"email\": \"heskia@example.com\",\n    \"password\": \"heskia12\"\n}" },
+          "url": { "raw": "http://localhost/api-php-native-heskiamallisa/public/api/v1/auth/login", "protocol": "http", "host": ["localhost"], "path": ["api-php-native-heskiamallisa", "public", "api", "v1", "auth", "login"] }
+        }
+      },
+      {
+        "name": "Verify Token",
+        "request": {
+          "method": "GET",
+          "header": [{ "key": "Authorization", "value": "Bearer {{token}}", "type": "text" }],
+          "url": { "raw": "http://localhost/api-php-native-heskiamallisa/public/api/v1/auth/verify", "protocol": "http", "host": ["localhost"], "path": ["api-php-native-heskiamallisa", "public", "api", "v1", "auth", "verify"] }
+        }
+      },
+      {
+        "name": "Check Token",
+        "request": {
+          "method": "POST",
+          "header": [{ "key": "Content-Type", "value": "application/json" }],
+          "body": { "mode": "raw", "raw": "{\n    \"token\": \"{{token}}\"\n}" },
+          "url": { "raw": "http://localhost/api-php-native-heskiamallisa/public/api/v1/auth/check", "protocol": "http", "host": ["localhost"], "path": ["api-php-native-heskiamallisa", "public", "api", "v1", "auth", "check"] }
+        }
+      },
+      {
+        "name": "Get Users",
+        "request": {
+          "method": "GET",
+          "header": [{ "key": "Authorization", "value": "Bearer {{token}}", "type": "text" }],
+          "url": { "raw": "http://localhost/api-php-native-heskiamallisa/public/api/v1/users", "protocol": "http", "host": ["localhost"], "path": ["api-php-native-heskiamallisa", "public", "api", "v1", "users"] }
+        }
+      },
+      {
+        "name": "Get User Detail",
+        "request": {
+          "method": "GET",
+          "header": [{ "key": "Authorization", "value": "Bearer {{token}}", "type": "text" }],
+          "url": { "raw": "http://localhost/api-php-native-heskiamallisa/public/api/v1/users/{{userId}}", "protocol": "http", "host": ["localhost"], "path": ["api-php-native-heskiamallisa", "public", "api", "v1", "users", "{{userId}}"] }
+        }
+      },
+      {
+        "name": "Create User",
+        "request": {
+          "method": "POST",
+          "header": [
+            { "key": "Authorization", "value": "Bearer {{token}}", "type": "text" },
+            { "key": "Content-Type", "value": "application/json" }
+          ],
+          "body": { "mode": "raw", "raw": "{\n    \"name\": \"heskia\",\n    \"email\": \"heskia@example.com\",\n    \"password\": \"heskia12\",\n    \"role\": \"user\"\n}" },
+          "url": { "raw": "http://localhost/api-php-native-heskiamallisa/public/api/v1/users", "protocol": "http", "host": ["localhost"], "path": ["api-php-native-heskiamallisa", "public", "api", "v1", "users"] }
+        }
+      },
+      {
+        "name": "Update User",
+        "request": {
+          "method": "PUT",
+          "header": [
+            { "key": "Authorization", "value": "Bearer {{token}}", "type": "text" },
+            { "key": "Content-Type", "value": "application/json" }
+          ],
+          "body": { "mode": "raw", "raw": "{\n    \"name\": \"heskia\",\n    \"email\": \"heskia@example.com\",\n    \"role\": \"user\"\n}" },
+          "url": { "raw": "http://localhost/api-php-native-heskiamallisa/public/api/v1/users/{{userId}}", "protocol": "http", "host": ["localhost"], "path": ["api-php-native-heskiamallisa", "public", "api", "v1", "users", "{{userId}}"] }
+        }
+      },
+      {
+        "name": "Delete User",
+        "request": {
+          "method": "DELETE",
+          "header": [{ "key": "Authorization", "value": "Bearer {{token}}", "type": "text" }],
+          "url": { "raw": "http://localhost/api-php-native-heskiamallisa/public/api/v1/users/{{userId}}", "protocol": "http", "host": ["localhost"], "path": ["api-php-native-heskiamallisa", "public", "api", "v1", "users", "{{userId}}"] }
+        }
+      },
+      {
+        "name": "Upload File",
+        "request": {
+          "method": "POST",
+          "header": [{ "key": "Authorization", "value": "Bearer {{token}}", "type": "text" }],
+          "body": {
+            "mode": "formdata",
+            "formdata": [{ "key": "file", "type": "file", "src": "" }]
+          },
+          "url": { "raw": "http://localhost/api-php-native-heskiamallisa/public/api/v1/upload", "protocol": "http", "host": ["localhost"], "path": ["api-php-native-heskiamallisa", "public", "api", "v1", "upload"] }
+        }
+      }
+    ],
+    "event": [
+      {
+        "listen": "test",
+        "script": {
+          "exec": [
+            "if (pm.response.code === 200 && pm.response.json().data.token) {",
+            "    pm.environment.set('token', pm.response.json().data.token);",
+            "}"
+          ],
+          "type": "text/javascript"
+        }
+      }
+    ]
+  }
