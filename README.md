@@ -54,7 +54,7 @@ Copy code
 ### 2️⃣ Import Database
 Buat database `apiphp`, lalu jalankan SQL berikut di phpMyAdmin:
 
-```sql
+sql
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
@@ -222,4 +222,4 @@ Dosen Pengampu:	Semuel Yakobus Padang, S.Kom,.M.Kom
 Proyek ini digunakan untuk keperluan pembelajaran Pemrograman Jaringan.
 Tidak untuk tujuan komersial atau distribusi ulang tanpa izin dosen pengampu.
 
-<p align="center"> Dibuat dengan ❤️ menggunakan <b>PHP Native</b><br/> © 2025 Praktikum Pemrograman Jaringan kelas D5 Iniversitas Kristen Indonesia Toraja (UKIT)</p> ```
+<p align="center"> Dibuat dengan ❤️ menggunakan <b>PHP Native</b><br/> © 2025 Praktikum Pemrograman Jaringan kelas D5 Iniversitas Kristen Indonesia Toraja (UKIT)</p> 
